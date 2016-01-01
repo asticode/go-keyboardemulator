@@ -34,6 +34,9 @@ func (ke keyboardEmulator) Down(keys Keys) error {
 func (ke keyboardEmulator) Press(keys ...Keys) error {
 	// Range over keys
 	for _, k := range keys {
+		// TODO Make it optionnal ?
+		time.Sleep(time.Duration(50) * time.Millisecond)
+
 		// Press key
 		if e := ke.press(k); e != nil {
 			return e
@@ -63,8 +66,8 @@ func (ke *keyboardEmulator) SetAddRealLifeDelayBetweenPresses(v bool) KeyboardEm
 
 func (ke keyboardEmulator) randomRealLifeDelay() time.Duration {
 	// Get random int
-	max := 100
-	min := 50
+	max := 70
+	min := 30
 	i := min + rand.Intn(max-min)
 
 	// Return duration
