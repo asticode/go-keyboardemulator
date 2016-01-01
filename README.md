@@ -1,6 +1,6 @@
 # Important
 
-`go-keyboardemulator` is only available for Windows for now. Linux will come soon and MAC OSX too I hope :D
+`go-keyboardemulator` is only available for Windows for now. Linux will come next and hopefully MAC OSX too :D
 
 # About
 
