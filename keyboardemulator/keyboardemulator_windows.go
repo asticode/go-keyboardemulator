@@ -126,7 +126,7 @@ func (ke keyboardEmulator) write(i string) error {
 		inputs := []w32.INPUT{}
 
 		// Add real life delay between presses
-		if k > 0 && vk.addRealLifeDelayBetweenPresses {
+		if k > 0 && ke.addRealLifeDelayBetweenPresses {
 			time.Sleep(ke.randomRealLifeDelay())
 		}
 
