@@ -1,7 +1,8 @@
 package keyboardemulator
+
 import (
-	"time"
 	"math/rand"
+	"time"
 )
 
 // KeyboardEmulator represents a keyboard emulator
@@ -64,7 +65,7 @@ func (ke keyboardEmulator) randomRealLifeDelay() time.Duration {
 	// Get random int
 	max := 100
 	min := 50
-	i := min + rand.Intn(max - min)
+	i := min + rand.Intn(max-min)
 
 	// Return duration
 	return time.Duration(i) * time.Millisecond

@@ -111,7 +111,7 @@ func (ke keyboardEmulator) press(keys Keys) error {
 	r := w32.SendInput(inputs)
 
 	// Check return
-	if int(r) != 2 * len(keys) {
+	if int(r) != 2*len(keys) {
 		return errors.New("Invalid return status " + strconv.Itoa(int(r)))
 	}
 
